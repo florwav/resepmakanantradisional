@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resep Masakan Tradisional Indonesia</title>
+
+    <!-- ==========================================================================
+       KODE CSS ASLI TEMANMU
+       ========================================================================== -->
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+    }
+
+    header{
+        background:#8b0000;
+        color:white;
+        text-align:center;
+        padding:25px;
+    }
+
+    main{
+        max-width:900px;
+        margin:30px auto;
+        padding:20px;
+    }
+
+    .card{
+        background:white;
+        margin-bottom:20px;
+        padding:20px;
+        border-radius:12px;
+        box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .card h2{
+        color:#8b0000;
+        margin-bottom:10px;
+    }
+
+    button{
+        background:#d35400;
+        color:white;
+        border:none;
+        padding:10px 15px;
+        border-radius:6px;
+        cursor:pointer;
+        margin-bottom:15px;
+    }
+
+    button:hover{
+        background:#a04000;
+    }
+
+    .resep{
+        display:none;
+        margin-top:10px;
+    }
+
+    .resep h3{
+        margin-top:10px;
+        color:#444;
+    }
+
+    ul, ol{
+        margin-left:20px;
+        margin-top:8px;
+    }
+
+    li{
+        margin-bottom:5px;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🍽 Resep Masakan Tradisional Indonesia</h1>
+        <p>Rendang, Tunjang, dan Telur Barendo</p>
+    </header>
+
+    <main>
+
+        <div class="card">
+            <h2>🥩 Rendang</h2>
+            <button onclick="toggleResep('rendang')">Lihat Resep</button>
+
+            <div id="rendang" class="resep">
+                <h3>Bahan:</h3>
+                <ul>
+                    <li>1 kg daging sapi</li>
+                    <li>1 liter santan</li>
+                    <li>10 bawang merah</li>
+                    <li>5 bawang putih</li>
+                    <li>10 cabai merah</li>
+                    <li>2 batang serai</li>
+                </ul>
+
+                <h3>Cara Membuat:</h3>
+                <ol>
+                    <li>Haluskan dan tumis bumbu.</li>
+                    <li>Masukkan santan dan rempah.</li>
+                    <li>Masukkan daging sapi.</li>
+                    <li>Masak hingga santan mengering dan bumbu meresap.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🍲 Tunjang</h2>
+            <button onclick="toggleResep('tunjang')">Lihat Resep</button>
+
+            <div id="tunjang" class="resep">
+                <h3>Bahan:</h3>
+                <ul>
+                    <li>500 gr kikil sapi</li>
+                    <li>500 ml santan</li>
+                    <li>8 bawang merah</li>
+                    <li>4 bawang putih</li>
+                    <li>5 cabai merah</li>
+                </ul>
+
+                <h3>Cara Membuat:</h3>
+                <ol>
+                    <li>Rebus kikil hingga empuk.</li>
+                    <li>Tumis bumbu yang telah dihaluskan.</li>
+                    <li>Masukkan santan dan kikil.</li>
+                    <li>Masak hingga kuah mengental.</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🥚 Telur Barendo</h2>
+            <button onclick="toggleResep('barendo')">Lihat Resep</button>
+
+            <div id="barendo" class="resep">
+                <h3>Bahan:</h3>
+                <ul>
+                    <li>4 butir telur</li>
+                    <li>2 siung bawang putih</li>
+                    <li>Daun bawang</li>
+                    <li>Garam dan merica</li>
+                </ul>
+
+                <h3>Cara Membuat:</h3>
+                <ol>
+                    <li>Kocok telur hingga berbusa.</li>
+                    <li>Tambahkan bumbu dan daun bawang.</li>
+                    <li>Goreng dalam minyak panas.</li>
+                    <li>Sajikan saat matang keemasan.</li>
+                </ol>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================================================
+       KODE JAVASCRIPT ASLI TEMANMU
+       ========================================================================== -->
+    <script>
+    function toggleResep(id) {
+        const resep = document.getElementById(id);
+
+        if (resep.style.display === "block") {
+            resep.style.display = "none";
+        } else {
+            resep.style.display = "block";
+        }
+    }
+    </script>
+
+</body>
+</html>
